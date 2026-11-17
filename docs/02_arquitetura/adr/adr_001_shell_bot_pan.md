@@ -30,4 +30,4 @@ Reutilizar o **design system / layout** do Bot_Pan como shell do portal, sem inc
 
 ## Consequências
 
-Referência em WSL local nesta máquina (`…/projetos/Bot_Pan`), aberta em outra janela do Cursor. **Não** há cópia na VM — o shell (F2.S3) consome essa pasta via acesso local/WSL.
+Referência canônica: [RicardoDavitec/Bot_Pan](https://github.com/RicardoDavitec/Bot_Pan) (`apps/web/src/styles.css`). Na VM, espelho opcional em `_ref/Bot_Pan` (gitignored). WSL do autor: `\\wsl.localhost\Ubuntu\home\wsl\projetos\Bot_Pan`. Tokens do portal em `apps/web/src/styles/tokens.css` (PEND-002 fechado 2026-11-17).

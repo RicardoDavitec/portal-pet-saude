@@ -1,24 +1,30 @@
-/* Tokens shell — aproximação Bot_Pan / VitaGuard (ADR-001).
-   Fonte canônica WSL ausente nesta VM: PEND-20261117-002. */
+/* Tokens canônicos Bot_Pan (ADR-001).
+   Fonte: github.com/RicardoDavitec/Bot_Pan → apps/web/src/styles.css (:root)
+   + mobile lib/theme.ts (primary #005BBB só no PWA claro; admin usa accent sky).
+   Espelho local de referência: _ref/Bot_Pan (gitignored). */
 :root {
-  --bp-bg: #1a2332;
-  --bp-bg-elevated: #243044;
-  --bp-panel: #2a3a52;
-  --bp-chrome: #121a26;
-  --bp-surface: #e8edf2;
-  --bp-surface-2: #dfe6ee;
-  --bp-ink: #152033;
-  --bp-ink-muted: #5a6b7d;
-  --bp-accent: #3d8bfd;
-  --bp-accent-strong: #2a6fd6;
-  --bp-warn: #c47a2c;
-  --bp-danger: #c23b3b;
-  --bp-border: rgba(21, 32, 51, 0.16);
-  --bp-sidebar-w: 248px;
+  /* Admin shell Bot_Pan */
+  --bp-bg: #07111f;
+  --bp-bg-elevated: #0f172a;
+  --bp-panel: #1e293b;
+  --bp-chrome: #07111f;
+  --bp-surface: #0f172a;
+  --bp-surface-2: #1e293b;
+  --bp-ink: #f1f5f9;
+  --bp-ink-muted: #94a3b8;
+  --bp-accent: #38bdf8;
+  --bp-accent-strong: #0ea5e9;
+  --bp-success: #4ade80;
+  --bp-warn: #fbbf24;
+  --bp-danger: #f87171;
+  --bp-border: #334155;
+  --bp-on-accent: #07111f;
+  --bp-sidebar-w: 220px;
   --bp-right-w: 300px;
-  --bp-status-h: 28px;
-  --bp-font: "Segoe UI", "Source Sans 3", Tahoma, sans-serif;
-  --bp-display: "Segoe UI Semibold", "Fraunces", Georgia, serif;
-  --bp-radius: 4px;
-  --bp-shadow: 0 8px 28px rgba(18, 26, 38, 0.28);
+  --bp-status-h: 32px;
+  --bp-font: "Inter", "Segoe UI", sans-serif;
+  --bp-display: "Inter", "Segoe UI", sans-serif;
+  --bp-radius: 10px;
+  --bp-radius-lg: 16px;
+  --bp-shadow: 0 24px 64px rgba(0, 0, 0, 0.4);
 }
