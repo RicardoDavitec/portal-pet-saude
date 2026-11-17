@@ -1,7 +1,5 @@
 # Adapter G1 Dashboard HTTP
 
-Implementa `FaqCatalog` e portas de analytics contra Nest em `http://127.0.0.1:3813` (ADR-003).
+Implementa `FaqCatalog` + `ChatbotAnalytics` contra Nest em `G1_DASHBOARD_API_URL` (ADR-003 / F2.S4).
 
-O espelho Vercel (`dashboard-pet-saude-seven.vercel.app`) permanece; produção canônica do painel municipal é este portal.
-
-Status: stub — F2.S4.
+Espelho Vercel: `https://dashboard-pet-saude-seven.vercel.app/` — permanece intacto.

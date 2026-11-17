@@ -6,11 +6,11 @@
   - inicio_real: 2026-11-17 11:20
   - fim_real: 2026-11-17 11:21
   - nota: g1-mock em 3813; Nest real = PEND-20261117-003
-- [ ] **F2.S4.P2** Adapter HTTP FAQ + tradução de papéis PET
+- [x] **F2.S4.P2** Adapter HTTP FAQ + tradução de papéis PET
   - inicio: 2026-12-09 09:00
   - fim: 2026-12-10 17:00
-  - inicio_real:
-  - fim_real:
+  - inicio_real: 2026-11-17 11:21
+  - fim_real: 2026-11-17 11:22
 - [ ] **F2.S4.P3** UI workspace G1 (lista/edição FAQ) no shell
   - inicio: 2026-12-11 09:00
   - fim: 2026-12-11 17:00
