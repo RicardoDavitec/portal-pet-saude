@@ -1,0 +1,32 @@
+# Portal PET Saúde — COMUM/portal (ADR-005).
+# Portas host: API 3861 · Web 3862 · Postgres 5500.
+# Serviços api/web serão preenchidos em F2.S1; postgres já define o contrato.
+
+services:
+  postgres:
+    image: postgres:17-alpine
+    container_name: portal-pet-postgres
+    restart: unless-stopped
+    environment:
+      POSTGRES_USER: ${POSTGRES_USER:-portal}
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD:?defina POSTGRES_PASSWORD no .env}
+      POSTGRES_DB: ${POSTGRES_DB:-portal_pet_saude}
+    ports:
+      - "127.0.0.1:5500:5432"
+    volumes:
+      - portal_pg_data:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U ${POSTGRES_USER:-portal} -d ${POSTGRES_DB:-portal_pet_saude}"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+
+  # api:
+  #   build: ./apps/api
+  #   ports: ["127.0.0.1:3861:3000"]
+  # web:
+  #   build: ./apps/web
+  #   ports: ["127.0.0.1:3862:8080"]
+
+volumes:
+  portal_pg_data:

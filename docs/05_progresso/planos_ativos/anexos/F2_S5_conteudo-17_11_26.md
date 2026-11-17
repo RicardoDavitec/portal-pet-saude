@@ -1,0 +1,22 @@
+# Anexo F2.S5 — Conteúdo e placeholders
+
+- [ ] **F2.S5.P1** CRUD/listagem Documentos públicos
+  - inicio: 2026-12-15 09:00
+  - fim: 2026-12-15 17:00
+  - inicio_real:
+  - fim_real:
+- [ ] **F2.S5.P2** Página Sobre + links Gitness
+  - inicio: 2026-12-16 09:00
+  - fim: 2026-12-16 12:00
+  - inicio_real:
+  - fim_real:
+- [ ] **F2.S5.P3** Placeholders G2–G5 (painel, totem, sgar; G5 gap)
+  - inicio: 2026-12-16 14:00
+  - fim: 2026-12-17 17:00
+  - inicio_real:
+  - fim_real:
+- [ ] **F2.S5.P4** Relatórios MVP (indicador G1 ou placeholder explícito)
+  - inicio: 2026-12-18 09:00
+  - fim: 2026-12-19 17:00
+  - inicio_real:
+  - fim_real:

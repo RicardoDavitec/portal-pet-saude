@@ -1,0 +1,6 @@
+#!/usr/bin/env bash
+# Wrapper local — delega ao toolkit-agentes-skills.
+set -euo pipefail
+KIT="/tmp/kit-portal/toolkit-agentes-skills"
+TARGET="$(cd "$(dirname "${BASH_SOURCE[0]}")/.." && pwd)"
+exec python3 "$KIT/scripts/atualizar_kit.py" --kit="$KIT" --target="$TARGET" "$@"

@@ -1,0 +1,42 @@
+# Anexo F1.S1 — Documentação e ambiente inicial
+
+- [x] **F1.S1.P1** Visão VIS-001
+  - inicio: 2026-11-17 08:00
+  - fim: 2026-11-17 08:30
+  - inicio_real: 2026-11-17 08:00
+  - fim_real: 2026-11-17 09:10
+- [x] **F1.S1.P2** Requisitos REQ-001…008
+  - inicio: 2026-11-17 08:30
+  - fim: 2026-11-17 09:00
+  - inicio_real: 2026-11-17 08:30
+  - fim_real: 2026-11-17 09:15
+- [x] **F1.S1.P3** RN + glossário de papéis
+  - inicio: 2026-11-17 09:00
+  - fim: 2026-11-17 09:20
+  - inicio_real: 2026-11-17 08:45
+  - fim_real: 2026-11-17 09:15
+- [x] **F1.S1.P4** Arquitetura + ADRs
+  - inicio: 2026-11-17 09:20
+  - fim: 2026-11-17 09:50
+  - inicio_real: 2026-11-17 09:10
+  - fim_real: 2026-11-17 09:25
+- [x] **F1.S1.P5** Dicionário Prisma (dic_*)
+  - inicio: 2026-11-17 09:50
+  - fim: 2026-11-17 10:10
+  - inicio_real: 2026-11-17 09:20
+  - fim_real: 2026-11-17 09:30
+- [x] **F1.S1.P6** Inventário LGPD
+  - inicio: 2026-11-17 10:10
+  - fim: 2026-11-17 10:25
+  - inicio_real: 2026-11-17 09:25
+  - fim_real: 2026-11-17 09:30
+- [x] **F1.S1.P7** Bootstrap toolkit + esqueleto hexagonal + plano F/S/P
+  - inicio: 2026-11-17 09:00
+  - fim: 2026-11-17 10:00
+  - inicio_real: 2026-11-17 09:03
+  - fim_real: 2026-11-17 09:35
+- [x] **F1.S1.P8** Emendar REGRA_MULTIGRUPOS (5500, 3861, 3862)
+  - inicio: 2026-11-17 09:05
+  - fim: 2026-11-17 09:20
+  - inicio_real: 2026-11-17 09:05
+  - fim_real: 2026-11-17 09:20

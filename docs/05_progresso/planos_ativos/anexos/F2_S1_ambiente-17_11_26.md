@@ -1,0 +1,28 @@
+# Anexo F2.S1 — Ambiente, compose e proxy
+
+- [ ] **F2.S1.P1** docker-compose (api, web, postgres:5500) e `.env.example`
+  - inicio: 2026-11-17 14:00
+  - fim: 2026-11-17 16:00
+  - inicio_real:
+  - fim_real:
+- [ ] **F2.S1.P2** Prisma schema inicial + migration vazia de usuários/vínculos
+  - inicio: 2026-11-17 16:00
+  - fim: 2026-11-18 12:00
+  - inicio_real:
+  - fim_real:
+- [ ] **F2.S1.P3** NPM: apontar petsaude.franca para :3862 (remover redirect chatbots)
+  - inicio: 2026-11-18 14:00
+  - fim: 2026-11-18 16:00
+  - inicio_real:
+  - fim_real:
+- [ ] **F2.S1.P4** Healthchecks e README de operação (`docs/10_setup`)
+  - inicio: 2026-11-19 09:00
+  - fim: 2026-11-19 12:00
+  - inicio_real:
+  - fim_real:
+- [A] **F2.S1.P5** Copiar Bot_Pan para a VM — **cancelado**
+  - inicio: 2026-11-19 14:00
+  - fim: 2026-11-19 16:00
+  - inicio_real: 2026-11-17 09:32
+  - fim_real: 2026-11-17 09:32
+  - accept_ref: decisão 2026-11-17 — acesso via WSL local nesta máquina; sem cópia para `/srv`

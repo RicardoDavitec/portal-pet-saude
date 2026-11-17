@@ -1,0 +1,45 @@
+{
+  "template_id": "generic-phases",
+  "source": {
+    "label": "Fases genericas — Descoberta → Entrega (qualquer GLPI)"
+  },
+  "defaults": {
+    "kind": "phase",
+    "projectstates_alias": "new",
+    "is_milestone": 1
+  },
+  "phases": [
+    {
+      "code": "1",
+      "name": "1. Descoberta",
+      "kind": "phase",
+      "percent_done": 0,
+      "state": "new",
+      "content": "Fase 1 — Descoberta e levantamento."
+    },
+    {
+      "code": "2",
+      "name": "2. Desenho",
+      "kind": "phase",
+      "percent_done": 0,
+      "state": "new",
+      "content": "Fase 2 — Design e especificacao."
+    },
+    {
+      "code": "3",
+      "name": "3. Implementação",
+      "kind": "phase",
+      "percent_done": 0,
+      "state": "processing",
+      "content": "Fase 3 — Implementacao."
+    },
+    {
+      "code": "4",
+      "name": "4. Entrega",
+      "kind": "phase",
+      "percent_done": 0,
+      "state": "processing",
+      "content": "Fase 4 — Entrega e estabilizacao."
+    }
+  ]
+}

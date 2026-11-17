@@ -1,0 +1,10 @@
+{
+  "backup": {
+    "destino_padrao": { "windows": "", "linux": "", "darwin": "" },
+    "fallback_por_so": {},
+    "fallback_relativo_repo": "_backups_local"
+  },
+  "sessao": {
+    "historico_relativo_repo": "docs/05_progresso/geral"
+  }
+}

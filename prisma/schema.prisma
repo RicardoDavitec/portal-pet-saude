@@ -1,0 +1,102 @@
+// Schema inicial — Portal PET Saúde (ADR-004).
+// Migrations serão aplicadas em F2.S1.
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+enum GrupoPet {
+  G1
+  G2
+  G3
+  G4
+  G5
+}
+
+enum PapelGrupo {
+  coordenador_grupo
+  tutor
+  preceptor
+  orientador_servico
+  monitor
+  participante
+}
+
+model Usuario {
+  id          String   @id @default(uuid())
+  adSam       String   @unique @map("ad_sam")
+  email       String?
+  nome        String
+  gestorPet   Boolean  @default(false) @map("gestor_pet")
+  ativo       Boolean  @default(true)
+  criadoEm    DateTime @default(now()) @map("criado_em")
+  atualizadoEm DateTime @updatedAt @map("atualizado_em")
+
+  vinculos  VinculoGrupo[]
+  sessoes   Sessao[]
+  auditorias AuditoriaVinculo[] @relation("AtorAuditoria")
+
+  @@map("usuarios")
+}
+
+model VinculoGrupo {
+  id        String     @id @default(uuid())
+  usuarioId String     @map("usuario_id")
+  grupo     GrupoPet
+  papel     PapelGrupo
+  ativo     Boolean    @default(true)
+  inicio    DateTime   @db.Date
+  fim       DateTime?  @db.Date
+  criadoEm  DateTime   @default(now()) @map("criado_em")
+
+  usuario Usuario @relation(fields: [usuarioId], references: [id])
+
+  @@index([usuarioId, grupo])
+  @@map("vinculos_grupo")
+}
+
+model Sessao {
+  id         String    @id @default(uuid())
+  usuarioId  String    @map("usuario_id")
+  tokenHash  String    @map("token_hash")
+  criadaEm   DateTime  @default(now()) @map("criada_em")
+  expiraEm   DateTime  @map("expira_em")
+  revogadaEm DateTime? @map("revogada_em")
+  userAgent  String?   @map("user_agent")
+
+  usuario Usuario @relation(fields: [usuarioId], references: [id])
+
+  @@map("sessoes")
+}
+
+model AuditoriaVinculo {
+  id        String   @id @default(uuid())
+  atorId    String   @map("ator_id")
+  vinculoId String?  @map("vinculo_id")
+  acao      String
+  antes     Json?
+  depois    Json?
+  em        DateTime @default(now())
+
+  ator Usuario @relation("AtorAuditoria", fields: [atorId], references: [id])
+
+  @@map("auditoria_vinculos")
+}
+
+model Documento {
+  id           String   @id @default(uuid())
+  titulo       String
+  slug         String   @unique
+  categoria    String
+  corpoMd      String   @map("corpo_md")
+  publicado    Boolean  @default(false)
+  versao       String
+  atualizadoEm DateTime @updatedAt @map("atualizado_em")
+
+  @@map("documentos")
+}

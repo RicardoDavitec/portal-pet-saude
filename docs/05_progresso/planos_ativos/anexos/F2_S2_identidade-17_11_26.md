@@ -1,0 +1,22 @@
+# Anexo F2.S2 — LDAP e cadastros
+
+- [ ] **F2.S2.P1** Port UserDirectory + adapter LDAP (config DTI)
+  - inicio: 2026-11-24 09:00
+  - fim: 2026-11-24 17:00
+  - inicio_real:
+  - fim_real:
+- [ ] **F2.S2.P2** Casos de uso login/logout/sessão revogável
+  - inicio: 2026-11-25 09:00
+  - fim: 2026-11-25 17:00
+  - inicio_real:
+  - fim_real:
+- [ ] **F2.S2.P3** CRUD vínculos + RN-002/RN-003 + auditoria
+  - inicio: 2026-11-26 09:00
+  - fim: 2026-11-27 17:00
+  - inicio_real:
+  - fim_real:
+- [ ] **F2.S2.P4** Guards de autorização na API
+  - inicio: 2026-11-28 09:00
+  - fim: 2026-11-28 17:00
+  - inicio_real:
+  - fim_real:
