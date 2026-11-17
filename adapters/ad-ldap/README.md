@@ -12,3 +12,5 @@ Implementa `UserDirectory` (ADR-002 / F2.S2.P1).
   - `LDAP_USER_FILTER` (ex.: `(sAMAccountName={{username}})`)
 
 Usuários dev: `gestor/gestor`, `coordg1/coord`, `tutor/tutor`, `leitor/leitor`.
+
+Procedimento operacional: `docs/10_setup/ops_003_auth_ldap.md`.
