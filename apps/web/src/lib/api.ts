@@ -18,6 +18,7 @@ export type MeResponse = {
     sobre: boolean;
   };
   g1: { lerFaq: boolean; escreverFaq: boolean; verPii: boolean };
+  ipCliente?: string | null;
 };
 
 function authHeaders(): HeadersInit {

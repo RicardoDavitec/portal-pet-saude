@@ -67,7 +67,7 @@ export class AuthController {
   }
 
   @Get("me")
-  async me(@Headers("authorization") authorization?: string) {
+  async me(@Headers("authorization") authorization?: string, @Req() req?: Request) {
     const token = bearer(authorization);
     if (!token) throw new UnauthorizedException();
     const sessao = await resolverSessao({
@@ -83,6 +83,7 @@ export class AuthController {
       vinculos: sessao.vinculos,
       menu: menuVisivel(ctx),
       g1: permsG1(ctx),
+      ipCliente: clientIp(req),
     };
   }
 }
@@ -90,4 +91,12 @@ export class AuthController {
 function bearer(authorization?: string): string | null {
   if (!authorization?.startsWith("Bearer ")) return null;
   return authorization.slice(7).trim() || null;
+}
+
+function clientIp(req?: Request): string | null {
+  if (!req) return null;
+  const xf = req.headers["x-forwarded-for"];
+  if (typeof xf === "string" && xf.trim()) return xf.split(",")[0].trim();
+  if (Array.isArray(xf) && xf[0]) return xf[0].split(",")[0].trim();
+  return req.ip || req.socket.remoteAddress || null;
 }

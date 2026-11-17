@@ -1,22 +1,24 @@
-/* Tokens shell — extraídos/adaptados do padrão Bot_Pan (ADR-001).
-   Fonte WSL local ausente nesta VM: ver PEND-20261117-002. */
+/* Tokens shell — aproximação Bot_Pan / VitaGuard (ADR-001).
+   Fonte canônica WSL ausente nesta VM: PEND-20261117-002. */
 :root {
-  --bp-bg: #0f2a32;
-  --bp-bg-elevated: #163a44;
-  --bp-panel: #1b4752;
-  --bp-surface: #f3f6f4;
-  --bp-surface-2: #e7eeea;
-  --bp-ink: #102227;
-  --bp-ink-muted: #4d646b;
-  --bp-accent: #2f9e8a;
-  --bp-accent-strong: #1f7a6a;
+  --bp-bg: #1a2332;
+  --bp-bg-elevated: #243044;
+  --bp-panel: #2a3a52;
+  --bp-chrome: #121a26;
+  --bp-surface: #e8edf2;
+  --bp-surface-2: #dfe6ee;
+  --bp-ink: #152033;
+  --bp-ink-muted: #5a6b7d;
+  --bp-accent: #3d8bfd;
+  --bp-accent-strong: #2a6fd6;
   --bp-warn: #c47a2c;
-  --bp-danger: #b33a3a;
-  --bp-border: rgba(16, 34, 39, 0.12);
+  --bp-danger: #c23b3b;
+  --bp-border: rgba(21, 32, 51, 0.16);
   --bp-sidebar-w: 248px;
   --bp-right-w: 300px;
-  --bp-font: "Source Sans 3", "Segoe UI", sans-serif;
-  --bp-display: "Fraunces", Georgia, serif;
-  --bp-radius: 10px;
-  --bp-shadow: 0 10px 30px rgba(15, 42, 50, 0.18);
+  --bp-status-h: 28px;
+  --bp-font: "Segoe UI", "Source Sans 3", Tahoma, sans-serif;
+  --bp-display: "Segoe UI Semibold", "Fraunces", Georgia, serif;
+  --bp-radius: 4px;
+  --bp-shadow: 0 8px 28px rgba(18, 26, 38, 0.28);
 }

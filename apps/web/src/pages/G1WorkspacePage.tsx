@@ -47,14 +47,14 @@ export function G1WorkspacePage({ me }: { me: MeResponse }) {
     return (
       <>
         <h1>G1 — ChatBot</h1>
-        <p className="lead">Sem vínculo G1 para FAQ.</p>
+        <p className="lead">Sem vínculo no grupo G1 — ChatBot para FAQ.</p>
       </>
     );
   }
 
   return (
     <>
-      <h1>G1 — FAQ / Dashboard</h1>
+      <h1>G1 — ChatBot · FAQ / Dashboard</h1>
       <p className="lead">Workspace via adapter Nest (REQ-006 / RN-004).</p>
       {erro && <div className="error">{erro}</div>}
 

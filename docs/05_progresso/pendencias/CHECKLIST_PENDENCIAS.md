@@ -31,6 +31,7 @@
   Corrigido em: `—`
   Contexto: Pasta `…/projetos/Bot_Pan` / VitaGuard não encontrada em `/home`, `/srv` nem mounts WSL; shell atual usa tokens municipais adaptados em `apps/web/src/styles/tokens.css` (ADR-001). Há tokens do Dashboard-PetSaude (`front/src/styles.css`, sidebar roxo `#4b4fa8` / `#1f2140`) — **não** substituem Bot_Pan e não devem ser copiados à cegas.
   Critério: Diff visual documentado contra Bot_Pan WSL e tokens atualizados.
+  Nota 2026-11-17: shell refinado (login janela, painéis L/R colapsáveis+resize, status bar, nomes GLO-001); falta só tokens/assets canônicos do WSL.
   Evidência: varredura 2026-11-17 — path WSL ausente
   Refs: `apps/web/src/styles/tokens.css`, ADR-001; `/home/petsaude/chatbot/chatbot-docs/Dashboard-PetSaude/front/src/styles.css`
   <!-- glpi: plan_start="2026-11-17 10:50" plan_end="2026-12-05 18:00" -->

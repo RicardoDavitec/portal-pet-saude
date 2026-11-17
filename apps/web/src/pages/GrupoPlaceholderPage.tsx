@@ -1,47 +1,50 @@
+import { GRUPOS_PET, type CodigoGrupo, nomeGrupo } from "../lib/grupos";
+
 const META: Record<
-  string,
-  { titulo: string; repos: string[]; descricao: string; gap?: boolean }
+  CodigoGrupo,
+  { repos: string[]; descricao: string; gap?: boolean }
 > = {
+  G1: {
+    repos: ["api-chat-bot", "Dashboard-PetSaude"],
+    descricao: "Workspace operacional via adapter Nest (FAQ / dashboard).",
+  },
   G2: {
-    titulo: "G2 — Painel",
     repos: ["api-painel", "web-painel"],
-    descricao: "Workspace do painel setorial. Integração via adapter Gitness quando certificados estiverem ok.",
+    descricao:
+      "Workspace do Dashboard de Serviços. Integração via adapter Gitness quando certificados estiverem ok.",
   },
   G3: {
-    titulo: "G3 — Totem",
     repos: ["totem-api", "totem-web"],
-    descricao: "Workspace do totem de atendimento. Placeholder até API/web estabilizados no inventário.",
+    descricao: "Workspace do Totem de atendimento. Placeholder até API/web estabilizados.",
   },
   G4: {
-    titulo: "G4 — SGAR / Antirrábica",
     repos: ["api-gestao-antirrabica", "sgar-web"],
-    descricao: "Gestão antirrábica. UI e adapter serão ligados após autenticação comum no portal.",
+    descricao: "Workspace Vacinas / gestão antirrábica. UI e adapter após autenticação comum.",
   },
   G5: {
-    titulo: "G5 — (a definir)",
     repos: [],
-    descricao: "Grupo sem repositório listado no inventário Gitness — gap conhecido.",
+    descricao: "Educação Permanente — grupo sem repositório listado no inventário Gitness (gap).",
     gap: true,
   },
 };
 
 export function GrupoPlaceholderPage({ grupo }: { grupo: string }) {
-  const meta = META[grupo] ?? {
-    titulo: grupo,
-    repos: [] as string[],
-    descricao: "Placeholder de workspace.",
-  };
+  const codigo = grupo as CodigoGrupo;
+  const meta = META[codigo] ?? { repos: [] as string[], descricao: "Placeholder de workspace." };
+  const titulo = nomeGrupo(codigo);
 
   return (
     <>
-      <h1>{meta.titulo}</h1>
+      <h1>{titulo}</h1>
       <p className="lead">{meta.descricao}</p>
       <div className="placeholder">
         {meta.gap ? (
-          <p>Status: <strong>gap</strong> — aguardando definição de repositório no Gitness.</p>
+          <p>
+            Status: <strong>gap</strong> — aguardando definição de repositório no Gitness.
+          </p>
         ) : (
           <>
-            <p>Repositórios previstos:</p>
+            <p>Repositórios previstos ({GRUPOS_PET[codigo]?.nome}):</p>
             <ul>
               {meta.repos.map((r) => (
                 <li key={r}>

@@ -1,9 +1,12 @@
 import "reflect-metadata";
 import { NestFactory } from "@nestjs/core";
+import type { NestExpressApplication } from "@nestjs/platform-express";
 import { AppModule } from "./app.module";
 
 async function bootstrap() {
-  const app = await NestFactory.create(AppModule);
+  const app = await NestFactory.create<NestExpressApplication>(AppModule);
+  // NPM (1 salto) — necessário para IP real do cliente no rodapé.
+  app.set("trust proxy", 1);
   app.enableCors({
     origin: (process.env.CORS_ORIGINS ?? "http://127.0.0.1:3862,http://localhost:3862")
       .split(",")

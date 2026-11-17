@@ -18,8 +18,8 @@ A interface deve seguir o layout do painel Bot_Pan/VitaGuard: menu lateral esque
 
 ## Critérios de aceite
 
-- [ ] Menu esquerdo com itens do MVP (grupos, config, cadastros, relatórios, docs, sobre)
-- [ ] Painéis laterais colapsáveis no padrão Bot_Pan
+- [x] Menu esquerdo com itens do MVP (grupos, config, cadastros, relatórios, docs, sobre)
+- [x] Painéis laterais colapsáveis no padrão Bot_Pan (largura ajustável; tokens canônicos ainda PEND-002)
 - [ ] Tokens de cor/tipografia documentados a partir da referência WSL Bot_Pan
 
 ## Rastreabilidade
