@@ -1,10 +1,10 @@
 # Anexo F2.S1 — Ambiente, compose e proxy
 
-- [ ] **F2.S1.P1** docker-compose (api, web, postgres:5500) e `.env.example`
+- [x] **F2.S1.P1** docker-compose (api, web, postgres:5500) e `.env.example`
   - inicio: 2026-11-17 14:00
   - fim: 2026-11-17 16:00
-  - inicio_real:
-  - fim_real:
+  - inicio_real: 2026-11-17 11:43
+  - fim_real: 2026-11-17 11:50
 - [ ] **F2.S1.P2** Prisma schema inicial + migration vazia de usuários/vínculos
   - inicio: 2026-11-17 16:00
   - fim: 2026-11-18 12:00

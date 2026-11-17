@@ -34,10 +34,10 @@ Anexo: [F1_S1_documentacao-17_11_26.md](anexos/F1_S1_documentacao-17_11_26.md)
 
 ## F2 — Implementação
 
-- [ ] **F2.S1** Ambiente, compose e proxy
+- [~] **F2.S1** Ambiente, compose e proxy
   - inicio: 2026-11-17 14:00
   - fim: 2026-11-21 18:00
-  - inicio_real:
+  - inicio_real: 2026-11-17 11:43
   - fim_real:
   - Anexo: [F2_S1_ambiente-17_11_26.md](anexos/F2_S1_ambiente-17_11_26.md)
 
