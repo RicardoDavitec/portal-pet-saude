@@ -41,10 +41,10 @@ Anexo: [F1_S1_documentacao-17_11_26.md](anexos/F1_S1_documentacao-17_11_26.md)
   - fim_real:
   - Anexo: [F2_S1_ambiente-17_11_26.md](anexos/F2_S1_ambiente-17_11_26.md)
 
-- [ ] **F2.S2** Identidade LDAP e cadastros
+- [~] **F2.S2** Identidade LDAP e cadastros
   - inicio: 2026-11-24 09:00
   - fim: 2026-11-28 18:00
-  - inicio_real:
+  - inicio_real: 2026-11-17 10:46
   - fim_real:
   - Anexo: [F2_S2_identidade-17_11_26.md](anexos/F2_S2_identidade-17_11_26.md)
 

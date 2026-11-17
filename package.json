@@ -1,0 +1,29 @@
+{
+  "name": "portal-pet-saude",
+  "private": true,
+  "workspaces": [
+    "apps/*",
+    "packages/*",
+    "adapters/*"
+  ],
+  "scripts": {
+    "build": "npm run build -w @portal/domain && npm run build -w @portal/ports && npm run build -w @portal/application && npm run build -w @portal/ad-ldap && npm run build -w @portal/prisma-postgres && npm run build -w @portal/g1-dashboard-http && npm run build -w @portal/api && npm run build -w @portal/web",
+    "build:api": "npm run build -w @portal/api",
+    "build:web": "npm run build -w @portal/web",
+    "start:api": "npm run start:prod -w @portal/api",
+    "dev:api": "npm run start:dev -w @portal/api",
+    "dev:web": "npm run dev -w @portal/web",
+    "prisma:generate": "prisma generate",
+    "prisma:migrate": "prisma migrate deploy"
+  },
+  "devDependencies": {
+    "prisma": "^6.19.0",
+    "typescript": "^5.6.3"
+  },
+  "dependencies": {
+    "@prisma/client": "^6.19.0"
+  },
+  "engines": {
+    "node": ">=18"
+  }
+}

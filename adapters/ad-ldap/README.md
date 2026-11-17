@@ -1,12 +1,14 @@
 # Adapter AD LDAP
 
-Implementa `UserDirectory` (ADR-002).
+Implementa `UserDirectory` (ADR-002 / F2.S2.P1).
 
-Configuração esperada (somente `.env`, nunca no Git):
+## Configuração (`.env`, nunca no Git)
 
-- `LDAP_URL` (preferir `ldaps://`)
-- `LDAP_BASE_DN`
-- `LDAP_BIND_DN` / `LDAP_BIND_PASSWORD` (se bind de serviço)
-- `LDAP_USER_FILTER` (ex.: `(sAMAccountName={{username}})`)
+- `AUTH_MODE=dev` — `DevUserDirectory` (usuários locais de desenvolvimento)
+- `AUTH_MODE=ldap` — LDAP/LDAPS real:
+  - `LDAP_URL` (preferir `ldaps://`)
+  - `LDAP_BASE_DN`
+  - `LDAP_BIND_DN` / `LDAP_BIND_PASSWORD`
+  - `LDAP_USER_FILTER` (ex.: `(sAMAccountName={{username}})`)
 
-Status: stub — implementação em F2.S2.
+Usuários dev: `gestor/gestor`, `coordg1/coord`, `tutor/tutor`, `leitor/leitor`.
