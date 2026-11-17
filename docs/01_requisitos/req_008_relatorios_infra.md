@@ -18,9 +18,9 @@ Relatórios concernentes ao PET (MVP: indicadores G1); banco Postgres próprio c
 
 ## Critérios de aceite
 
-- [ ] Tela Relatórios com ao menos um indicador G1 ou placeholder explícito
-- [ ] Compose sobe Postgres em `127.0.0.1:5500`
-- [ ] Árvore `docs/00`…`12` presente e plano F/S/P em `planos_ativos`
+- [x] Tela Relatórios com ao menos um indicador G1 ou placeholder explícito
+- [x] Compose sobe Postgres em `127.0.0.1:5500`
+- [x] Árvore `docs/00`…`12` presente e plano F/S/P em `planos_ativos`
 
 ## Rastreabilidade
 

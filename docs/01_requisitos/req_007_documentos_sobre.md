@@ -18,9 +18,9 @@ codigo: F1.S1.P2
 
 ## Critérios de aceite
 
-- [ ] Autenticado sem vínculo acessa Documentos e Sobre
-- [ ] Conteúdo versionável (arquivos ou registros no Postgres)
-- [ ] Sobre lista releases e aponta repositórios Gitness quando houver
+- [x] Autenticado sem vínculo acessa Documentos e Sobre
+- [x] Conteúdo versionável (arquivos ou registros no Postgres)
+- [x] Sobre lista releases e aponta repositórios Gitness quando houver
 
 ## Rastreabilidade
 

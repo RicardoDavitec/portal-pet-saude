@@ -15,8 +15,8 @@
   - fim: 2026-12-17 17:00
   - inicio_real: 2026-11-17 12:56
   - fim_real: 2026-11-17 12:57
-- [ ] **F2.S5.P4** Relatórios MVP (indicador G1 ou placeholder explícito)
+- [x] **F2.S5.P4** Relatórios MVP (indicador G1 ou placeholder explícito)
   - inicio: 2026-12-18 09:00
   - fim: 2026-12-19 17:00
-  - inicio_real:
-  - fim_real:
+  - inicio_real: 2026-11-17 12:57
+  - fim_real: 2026-11-17 12:54
