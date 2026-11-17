@@ -61,11 +61,11 @@
   Inserido em: `2026-11-17 10:50`
   Corrigido em: `—`
   Contexto: Plano vigente ainda sem IDs de Chamado/Projeto GLPI.
-  Nota 2026-11-17: `.glpi/project.yaml` com `project_id: null`; `~/.secrets/glpi.env` ausente nesta VM — impossível criar C/R sem tokens.
+  Nota 2026-11-17 14:45: C#**17423** gravado no plano e `ticket_id` em `.glpi/project.yaml`. Secrets em `~/.secrets/glpi.env` (chmod 600). API responde `ERROR_WRONG_APP_TOKEN_PARAMETER` (prod e homolog) — R#/`project_id` ainda null. CLI com `-k` (CA municipal).
   Critério: Cabeçalho do plano com C# e R# preenchidos.
-  Evidência: N/A
-  Refs: `docs/05_progresso/planos_ativos/portal-pet-saude-implementacao-17_11_26-09_10.md`
-  <!-- glpi: plan_start="2026-11-17 10:50" plan_end="2026-12-19 18:00" -->
+  Evidência: plano com C:17423; `glpi auth` → App-Token inválido
+  Refs: `docs/05_progresso/planos_ativos/portal-pet-saude-implementacao-17_11_26-09_10.md`, `.glpi/project.yaml`
+  <!-- glpi: plan_start="2026-11-17 10:50" plan_end="2026-12-19 18:00" real_start="2026-11-17 14:38" -->
 
 ## Histórico (concluídas)
 

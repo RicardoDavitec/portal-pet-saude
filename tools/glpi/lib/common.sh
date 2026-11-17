@@ -381,10 +381,15 @@ glpi_curl_headers_session() {
 }
 
 glpi_curl() {
+  # GLPI_CURL_INSECURE=0 força verificação TLS (padrão: -k — CA municipal falha nesta VM).
   local method="$1" path="$2"
   shift 2
   local url="${GLPI_API_URL}${path}"
   local args=(-sS -X "$method" -H "Content-Type: application/json")
+
+  if [[ "${GLPI_CURL_INSECURE:-1}" != "0" ]]; then
+    args+=(-k)
+  fi
 
   if [[ -n "${GLPI_APP_TOKEN}" ]]; then
     args+=(-H "App-Token: ${GLPI_APP_TOKEN}")
@@ -414,6 +419,10 @@ glpi_init_session() {
   local resp http_code curl_args=(-sS -w '\n%{http_code}' -X GET \
     -H "Content-Type: application/json" \
     -H "Authorization: user_token ${GLPI_USER_TOKEN}")
+
+  if [[ "${GLPI_CURL_INSECURE:-1}" != "0" ]]; then
+    curl_args+=(-k)
+  fi
 
   if [[ -n "${GLPI_APP_TOKEN}" ]]; then
     curl_args+=(-H "App-Token: ${GLPI_APP_TOKEN}")
