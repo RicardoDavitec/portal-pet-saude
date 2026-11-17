@@ -55,10 +55,10 @@ Anexo: [F1_S1_documentacao-17_11_26.md](anexos/F1_S1_documentacao-17_11_26.md)
   - fim_real: 2026-11-17 11:18
   - Anexo: [F2_S3_shell-17_11_26.md](anexos/F2_S3_shell-17_11_26.md)
 
-- [ ] **F2.S4** Adapter G1 (FAQ/Dashboard)
+- [~] **F2.S4** Adapter G1 (FAQ/Dashboard)
   - inicio: 2026-12-08 09:00
   - fim: 2026-12-12 18:00
-  - inicio_real:
+  - inicio_real: 2026-11-17 11:20
   - fim_real:
   - Anexo: [F2_S4_adapter_g1-17_11_26.md](anexos/F2_S4_adapter_g1-17_11_26.md)
 

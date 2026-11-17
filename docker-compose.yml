@@ -1,6 +1,5 @@
 # Portal PET Saúde — COMUM/portal (ADR-005).
-# Portas host: API 3861 · Web 3862 · Postgres 5500.
-# Serviços api/web serão preenchidos em F2.S1; postgres já define o contrato.
+# Portas host: API 3861 · Web 3862 · Postgres 5500 · G1 mock/Nest 3813.
 
 services:
   postgres:
@@ -21,12 +20,64 @@ services:
       timeout: 5s
       retries: 5
 
-  # api:
-  #   build: ./apps/api
-  #   ports: ["127.0.0.1:3861:3000"]
-  # web:
-  #   build: ./apps/web
-  #   ports: ["127.0.0.1:3862:8080"]
+  api:
+    build:
+      context: .
+      dockerfile: apps/api/Dockerfile
+    container_name: portal-pet-api
+    restart: unless-stopped
+    environment:
+      PORT: 3000
+      DATABASE_URL: postgresql://${POSTGRES_USER:-portal}:${POSTGRES_PASSWORD}@postgres:5432/${POSTGRES_DB:-portal_pet_saude}
+      AUTH_MODE: ${AUTH_MODE:-dev}
+      LDAP_URL: ${LDAP_URL:-}
+      LDAP_BASE_DN: ${LDAP_BASE_DN:-}
+      LDAP_BIND_DN: ${LDAP_BIND_DN:-}
+      LDAP_BIND_PASSWORD: ${LDAP_BIND_PASSWORD:-}
+      LDAP_USER_FILTER: ${LDAP_USER_FILTER:-(sAMAccountName={{username}})}
+      G1_DASHBOARD_API_URL: ${G1_DASHBOARD_API_URL:-http://g1-mock:3813}
+      G1_SERVICE_TOKEN: ${G1_SERVICE_TOKEN:-}
+      CORS_ORIGINS: ${CORS_ORIGINS:-http://127.0.0.1:3862,http://localhost:3862}
+    ports:
+      - "127.0.0.1:3861:3000"
+    depends_on:
+      postgres:
+        condition: service_healthy
+      g1-mock:
+        condition: service_started
+    healthcheck:
+      test: ["CMD", "node", "-e", "fetch('http://127.0.0.1:3000/api/health/live').then(r=>process.exit(r.ok?0:1)).catch(()=>process.exit(1))"]
+      interval: 15s
+      timeout: 5s
+      retries: 8
+      start_period: 40s
+
+  web:
+    build:
+      context: .
+      dockerfile: apps/web/Dockerfile
+      args:
+        VITE_API_URL: ""
+    container_name: portal-pet-web
+    restart: unless-stopped
+    ports:
+      - "127.0.0.1:3862:8080"
+    depends_on:
+      api:
+        condition: service_healthy
+
+  g1-mock:
+    build:
+      context: ./tools/g1-mock
+    container_name: portal-pet-g1-mock
+    restart: unless-stopped
+    ports:
+      - "127.0.0.1:3813:3813"
+    healthcheck:
+      test: ["CMD", "node", "-e", "fetch('http://127.0.0.1:3813/health').then(r=>process.exit(r.ok?0:1)).catch(()=>process.exit(1))"]
+      interval: 15s
+      timeout: 5s
+      retries: 5
 
 volumes:
   portal_pg_data:
