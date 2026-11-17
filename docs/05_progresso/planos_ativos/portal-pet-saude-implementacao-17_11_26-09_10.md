@@ -48,11 +48,11 @@ Anexo: [F1_S1_documentacao-17_11_26.md](anexos/F1_S1_documentacao-17_11_26.md)
   - fim_real: 2026-11-17 11:08
   - Anexo: [F2_S2_identidade-17_11_26.md](anexos/F2_S2_identidade-17_11_26.md)
 
-- [~] **F2.S3** Shell Bot_Pan
+- [x] **F2.S3** Shell Bot_Pan
   - inicio: 2026-12-01 09:00
   - fim: 2026-12-05 18:00
   - inicio_real: 2026-11-17 11:15
-  - fim_real:
+  - fim_real: 2026-11-17 11:18
   - Anexo: [F2_S3_shell-17_11_26.md](anexos/F2_S3_shell-17_11_26.md)
 
 - [ ] **F2.S4** Adapter G1 (FAQ/Dashboard)
