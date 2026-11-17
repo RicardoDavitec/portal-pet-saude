@@ -44,7 +44,8 @@ export function App() {
         <Route path="cadastros" element={<CadastrosPage me={me} />} />
         <Route path="relatorios" element={<RelatoriosPage />} />
         <Route path="config" element={<ConfigPage />} />
-        <Route path="documentos" element={<DocumentosPage />} />
+        <Route path="documentos" element={<DocumentosPage me={me} />} />
+        <Route path="documentos/:slug" element={<DocumentosPage me={me} />} />
         <Route path="sobre" element={<SobrePage />} />
       </Route>
       <Route path="*" element={<Navigate to="/" replace />} />

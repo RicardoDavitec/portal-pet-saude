@@ -62,10 +62,10 @@ Anexo: [F1_S1_documentacao-17_11_26.md](anexos/F1_S1_documentacao-17_11_26.md)
   - fim_real: 2026-11-17 11:24
   - Anexo: [F2_S4_adapter_g1-17_11_26.md](anexos/F2_S4_adapter_g1-17_11_26.md)
 
-- [ ] **F2.S5** Documentos, Sobre, placeholders G2–G5, relatórios MVP
+- [~] **F2.S5** Documentos, Sobre, placeholders G2–G5, relatórios MVP
   - inicio: 2026-12-15 09:00
   - fim: 2026-12-19 18:00
-  - inicio_real:
+  - inicio_real: 2026-11-17 12:50
   - fim_real:
   - Anexo: [F2_S5_conteudo-17_11_26.md](anexos/F2_S5_conteudo-17_11_26.md)
 

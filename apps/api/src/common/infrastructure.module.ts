@@ -5,6 +5,7 @@ import {
   PrismaSessionStore,
   PrismaUsuarioStore,
   PrismaVinculoStore,
+  PrismaDocumentoStore,
 } from "@portal/prisma-postgres";
 import { G1DashboardHttpAdapter } from "@portal/g1-dashboard-http";
 import { DevSeedService } from "./dev-seed.service";
@@ -15,6 +16,7 @@ import {
   USER_DIRECTORY,
   USUARIO_STORE,
   VINCULO_STORE,
+  DOCUMENTO_STORE,
 } from "./tokens";
 
 export * from "./tokens";
@@ -47,6 +49,11 @@ export * from "./tokens";
       useFactory: (prisma: ReturnType<typeof getPrisma>) => new PrismaVinculoStore(prisma),
     },
     {
+      provide: DOCUMENTO_STORE,
+      inject: ["PRISMA"],
+      useFactory: (prisma: ReturnType<typeof getPrisma>) => new PrismaDocumentoStore(prisma),
+    },
+    {
       provide: FAQ_CATALOG,
       useFactory: () =>
         new G1DashboardHttpAdapter({
@@ -64,6 +71,7 @@ export * from "./tokens";
     USUARIO_STORE,
     SESSION_STORE,
     VINCULO_STORE,
+    DOCUMENTO_STORE,
     FAQ_CATALOG,
     CHATBOT_ANALYTICS,
   ],

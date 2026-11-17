@@ -1,10 +1,10 @@
 # Anexo F2.S5 — Conteúdo e placeholders
 
-- [ ] **F2.S5.P1** CRUD/listagem Documentos públicos
+- [x] **F2.S5.P1** CRUD/listagem Documentos públicos
   - inicio: 2026-12-15 09:00
   - fim: 2026-12-15 17:00
-  - inicio_real:
-  - fim_real:
+  - inicio_real: 2026-11-17 12:50
+  - fim_real: 2026-11-17 12:55
 - [ ] **F2.S5.P2** Página Sobre + links Gitness
   - inicio: 2026-12-16 09:00
   - fim: 2026-12-16 12:00

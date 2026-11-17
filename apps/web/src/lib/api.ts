@@ -80,3 +80,82 @@ export async function healthcheck() {
   if (!res.ok) throw new Error("API down");
   return res.json();
 }
+
+export type Documento = {
+  id: string;
+  titulo: string;
+  slug: string;
+  categoria: string;
+  corpoMd: string;
+  publicado: boolean;
+  versao: string;
+  atualizadoEm: string;
+};
+
+export async function fetchDocumentos(todos = false): Promise<Documento[]> {
+  const q = todos ? "?todos=1" : "";
+  const res = await fetch(`${API_BASE}/api/documentos${q}`, { headers: { ...authHeaders() } });
+  if (!res.ok) throw new Error("Falha ao listar documentos");
+  return res.json();
+}
+
+export async function fetchDocumento(slug: string): Promise<Documento> {
+  const res = await fetch(`${API_BASE}/api/documentos/${encodeURIComponent(slug)}`, {
+    headers: { ...authHeaders() },
+  });
+  if (!res.ok) throw new Error("Documento nao encontrado");
+  return res.json();
+}
+
+export async function createDocumento(input: {
+  titulo: string;
+  slug: string;
+  categoria: string;
+  corpoMd: string;
+  versao: string;
+  publicado?: boolean;
+}): Promise<Documento> {
+  const res = await fetch(`${API_BASE}/api/documentos`, {
+    method: "POST",
+    headers: { "Content-Type": "application/json", ...authHeaders() },
+    body: JSON.stringify(input),
+  });
+  if (!res.ok) throw new Error("Falha ao criar documento");
+  return res.json();
+}
+
+export type SobrePayload = {
+  titulo: string;
+  descricao: string;
+  dominio: string;
+  chatCidadao: string;
+  espelhoDashboardG1: string;
+  releases: Array<{ versao: string; data: string; notas: string }>;
+  repositorios: Array<{ grupo: string; nome: string; status: string; url: string | null }>;
+  notaGitness: string;
+};
+
+export async function fetchSobre(): Promise<SobrePayload> {
+  const res = await fetch(`${API_BASE}/api/sobre`, { headers: { ...authHeaders() } });
+  if (!res.ok) throw new Error("Falha ao carregar Sobre");
+  return res.json();
+}
+
+export type RelatorioMvp = {
+  geradoEm: string;
+  indicadores: Array<{
+    id: string;
+    grupo: string;
+    titulo: string;
+    valor: number | null;
+    unidade: string | null;
+    status: string;
+    nota: string;
+  }>;
+};
+
+export async function fetchRelatoriosMvp(): Promise<RelatorioMvp> {
+  const res = await fetch(`${API_BASE}/api/relatorios/mvp`, { headers: { ...authHeaders() } });
+  if (!res.ok) throw new Error("Falha ao carregar relatorios");
+  return res.json();
+}

@@ -1,16 +1,20 @@
 import { Inject, Injectable, OnModuleInit } from "@nestjs/common";
-import type { UsuarioStore, VinculoStore } from "@portal/ports";
-import { USUARIO_STORE, VINCULO_STORE } from "./tokens";
+import type { DocumentoStore, UsuarioStore, VinculoStore } from "@portal/ports";
+import { DOCUMENTO_STORE, USUARIO_STORE, VINCULO_STORE } from "./tokens";
 
 @Injectable()
 export class DevSeedService implements OnModuleInit {
   constructor(
     @Inject(USUARIO_STORE) private readonly usuarios: UsuarioStore,
     @Inject(VINCULO_STORE) private readonly vinculos: VinculoStore,
+    @Inject(DOCUMENTO_STORE) private readonly documentos: DocumentoStore,
   ) {}
 
   async onModuleInit() {
-    if ((process.env.AUTH_MODE ?? "dev") !== "dev") return;
+    if ((process.env.AUTH_MODE ?? "dev") !== "dev") {
+      await this.ensureDocumentosBase();
+      return;
+    }
     const gestor = await this.usuarios.upsertPorAdSam({
       adSam: "gestor",
       nome: "Gestor PET Dev",
@@ -39,6 +43,41 @@ export class DevSeedService implements OnModuleInit {
     await ensureVinculo(this.vinculos, coord.id, "G1", "coordenador_grupo");
     await ensureVinculo(this.vinculos, tutor.id, "G1", "tutor");
     await ensureVinculo(this.vinculos, leitor.id, "G1", "participante");
+    await this.ensureDocumentosBase();
+  }
+
+  private async ensureDocumentosBase() {
+    const seeds = [
+      {
+        slug: "politica-lgpd-portal",
+        titulo: "Politica de privacidade (LGPD)",
+        categoria: "lgpd",
+        versao: "1.0.0",
+        corpoMd:
+          "## Escopo\n\nTratamento de dados no Portal PET Saude Digital.\n\n## Bases legais\n\nExecucao de politicas publicas e consentimento quando aplicavel.\n\nVer inventario `docs/09_dados_e_tabelas/lgpd/lgp_001_portal_e_g1.md`.",
+      },
+      {
+        slug: "sobre-o-edital-pet",
+        titulo: "Edital PET Saude / I&SD — sintese",
+        categoria: "normativa",
+        versao: "1.0.0",
+        corpoMd:
+          "## Programa\n\nO portal organiza governanca dos cinco grupos do PET Saude Digital 2025.\n\n## Acesso\n\nAutenticacao AD municipal; menu filtrado por vinculo (RN-001).",
+      },
+      {
+        slug: "guia-uso-rapido",
+        titulo: "Guia de uso rapido",
+        categoria: "politica",
+        versao: "1.0.0",
+        corpoMd:
+          "## Entrar\n\nUse a conta municipal.\n\n## Sem vinculo\n\nDocumentos e Sobre permanecem disponiveis.\n\n## G1\n\nFAQ e dashboard via adapter Nest.",
+      },
+    ];
+    for (const s of seeds) {
+      const existing = await this.documentos.obterPorSlug(s.slug);
+      if (existing) continue;
+      await this.documentos.criar({ ...s, publicado: true });
+    }
   }
 }
 
