@@ -18,9 +18,9 @@ O painel municipal deve responder em `https://petsaude.franca.sp.gov.br`, sem re
 
 ## Critérios de aceite
 
-- [ ] HTTPS 200 na raiz após autenticação (ou tela de login)
-- [ ] Chat permanece em `https://chatbots.franca.sp.gov.br`
-- [ ] Proxy NPM aponta para o web do portal (`3862`)
+- [x] HTTPS 200 na raiz após autenticação (ou tela de login)
+- [x] Chat permanece em `https://chatbots.franca.sp.gov.br`
+- [x] Proxy NPM aponta para o web do portal (`3862` / `portal-pet-web:8080`)
 
 ## Rastreabilidade
 
