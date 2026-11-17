@@ -16,12 +16,12 @@
   - fim: 2026-11-18 16:00
   - inicio_real: 2026-11-17 11:51
   - fim_real: 2026-11-17 11:52
-  - evidência: host NPM id=1 → `portal-pet-web:8080`; advanced redirect chatbots removido; HTTPS 200
-- [ ] **F2.S1.P4** Healthchecks e README de operação (`docs/10_setup`)
+  - evidência: host NPM id=1 → `portal-pet-web:8080`; redirect chatbots removido; HTTPS 200
+- [x] **F2.S1.P4** Healthchecks e README de operação (`docs/10_setup`)
   - inicio: 2026-11-19 09:00
   - fim: 2026-11-19 12:00
-  - inicio_real:
-  - fim_real:
+  - inicio_real: 2026-11-17 11:52
+  - fim_real: 2026-11-17 11:52
 - [A] **F2.S1.P5** Copiar Bot_Pan para a VM — **cancelado**
   - inicio: 2026-11-19 14:00
   - fim: 2026-11-19 16:00

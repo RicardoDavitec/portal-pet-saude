@@ -7,7 +7,7 @@
 
 | ID | Status | Módulo | Inserido em | Corrigido em | Título |
 |----|--------|--------|-------------|--------------|--------|
-| PEND-20261117-001 | [ ] | infra | 2026-11-17 10:50 | — | Completar F2.S1 (NPM + compose formal) |
+| PEND-20261117-001 | [x] | infra | 2026-11-17 10:50 | 2026-11-17 11:52 | Completar F2.S1 (NPM + compose formal) |
 | PEND-20261117-002 | [ ] | web | 2026-11-17 10:50 | — | Extrair tokens canônicos Bot_Pan via WSL |
 | PEND-20261117-003 | [ ] | infra | 2026-11-17 10:50 | — | Substituir g1-mock pelo Nest Dashboard real :3813 |
 | PEND-20261117-004 | [ ] | backend | 2026-11-17 10:50 | — | Parâmetros LDAP reais do DTI |
@@ -15,15 +15,15 @@
 
 ## Pendências
 
-- [ ] **PEND-20261117-001** Completar F2.S1 (NPM + compose formal)
+- [x] **PEND-20261117-001** Completar F2.S1 (NPM + compose formal)
   Módulo: `infra`
   Inserido em: `2026-11-17 10:50`
-  Corrigido em: `—`
-  Contexto: S2–S4 puxaram bootstrap mínimo de api/web/postgres; F2.S1.P3 (NPM petsaude→3862) e fechamento formal das P de S1 ficaram fora do escopo pedido.
+  Corrigido em: `2026-11-17 11:52`
+  Nota: F2.S1.P1–P4 fechados; compose full; NPM petsaude→portal-pet-web; OPS-001/002.
   Critério: F2.S1 marcado [x] com NPM apontando e ops_001 validado.
-  Evidência: `docker-compose.yml`; anexo `F2_S1_ambiente-17_11_26.md`
+  Evidência: HTTPS petsaude 200; compose ps healthy; anexo F2_S1
   Refs: `docs/05_progresso/planos_ativos/anexos/F2_S1_ambiente-17_11_26.md`
-  <!-- glpi: plan_start="2026-11-17 10:50" plan_end="2026-11-21 18:00" -->
+  <!-- glpi: plan_start="2026-11-17 10:50" plan_end="2026-11-21 18:00" real_start="2026-11-17 11:43" real_end="2026-11-17 11:52" -->
 
 - [ ] **PEND-20261117-002** Extrair tokens canônicos Bot_Pan via WSL
   Módulo: `web`
@@ -67,4 +67,4 @@
 
 ## Histórico (concluídas)
 
-_Nenhuma ainda._
+- PEND-20261117-001 — F2.S1 compose+NPM (2026-11-17)

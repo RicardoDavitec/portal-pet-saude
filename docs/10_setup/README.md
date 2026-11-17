@@ -7,3 +7,6 @@ Primeiros passos para clonar, configurar e subir o produto em ambiente local.
 - Como saber que o ambiente ficou de pé
 
 Guias de compilação ficam em `03_implementacao/compilacao/`. Runbooks de produção ficam em `04_operacao/`.
+
+- [OPS-001](ops_001_ambiente_vm082.md)
+- [OPS-002](ops_002_npm_petsaude.md)
