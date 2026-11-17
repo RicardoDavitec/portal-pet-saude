@@ -4,8 +4,8 @@ key: portal-pet-saude
 code: PORTALPET                  # 2..12 chars, A-Z0-9_
 preset: api-vscode-glpi
 
-ticket_id: 17423                 # Chamado ITIL (C) — informado 2026-11-17
-project_id: null                 # Project raiz (R) — preencher quando API/App-Token OK
+ticket_id: 17423                 # Chamado ITIL (C)
+project_id: 96                   # Project raiz (R) — GEP - Portal PET Saúde - 0. [PAI]
 project_name: "Portal PET Saúde"
 
 phases:

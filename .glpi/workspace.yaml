@@ -1,7 +1,7 @@
 bundle: portal-pet-saude
 schema: 2
 glpi:
-  project_id: null                   # espelha .glpi/project.yaml quando App-Token OK
+  project_id: 96
   ticket_id: 17423
   hierarchy_file: hierarchy.yaml
   model_file: model.defaults.yaml

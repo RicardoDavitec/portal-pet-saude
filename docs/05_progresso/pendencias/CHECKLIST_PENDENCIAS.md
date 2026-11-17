@@ -11,7 +11,7 @@
 | PEND-20261117-002 | [x] | web | 2026-11-17 10:50 | 2026-11-17 14:10 | Extrair tokens canônicos Bot_Pan via WSL |
 | PEND-20261117-003 | [x] | infra | 2026-11-17 10:50 | 2026-11-17 14:25 | Substituir g1-mock pelo Nest Dashboard real :3813 |
 | PEND-20261117-004 | [ ] | backend | 2026-11-17 10:50 | — | Parâmetros LDAP reais do DTI |
-| PEND-20261117-005 | [ ] | docs | 2026-11-17 10:50 | — | IDs GLPI C/R no cabeçalho do plano |
+| PEND-20261117-005 | [x] | docs | 2026-11-17 10:50 | 2026-11-17 14:54 | IDs GLPI C/R no cabeçalho do plano |
 
 ## Pendências
 
@@ -56,19 +56,19 @@
   Refs: REQ-003, ADR-002
   <!-- glpi: plan_start="2026-11-17 10:50" plan_end="2026-11-28 18:00" -->
 
-- [ ] **PEND-20261117-005** IDs GLPI C/R no cabeçalho do plano
+- [x] **PEND-20261117-005** IDs GLPI C/R no cabeçalho do plano
   Módulo: `docs`
   Inserido em: `2026-11-17 10:50`
-  Corrigido em: `—`
-  Contexto: Plano vigente ainda sem IDs de Chamado/Projeto GLPI.
-  Nota 2026-11-17 14:45: C#**17423** gravado no plano e `ticket_id` em `.glpi/project.yaml`. Secrets em `~/.secrets/glpi.env` (chmod 600). API responde `ERROR_WRONG_APP_TOKEN_PARAMETER` (prod e homolog) — R#/`project_id` ainda null. CLI com `-k` (CA municipal).
+  Corrigido em: `2026-11-17 14:54`
+  Nota: C#17423 + R#96 (`GEP - Portal PET Saúde - 0. [PAI]`); Itil_Project vínculo id=78; App-Token válido; secrets só em `~/.secrets/glpi.env`.
   Critério: Cabeçalho do plano com C# e R# preenchidos.
-  Evidência: plano com C:17423; `glpi auth` → App-Token inválido
-  Refs: `docs/05_progresso/planos_ativos/portal-pet-saude-implementacao-17_11_26-09_10.md`, `.glpi/project.yaml`
-  <!-- glpi: plan_start="2026-11-17 10:50" plan_end="2026-12-19 18:00" real_start="2026-11-17 14:38" -->
+  Evidência: plano C:17423 R:96; `Project/96` + link ticket
+  Refs: `.glpi/project.yaml`, plano vigente
+  <!-- glpi: plan_start="2026-11-17 10:50" plan_end="2026-12-19 18:00" real_start="2026-11-17 14:38" real_end="2026-11-17 14:54" -->
 
 ## Histórico (concluídas)
 
+- PEND-20261117-005 — IDs GLPI C#17423 / R#96 (2026-11-17)
 - PEND-20261117-003 — Nest G1 real :3813 (2026-11-17)
 - PEND-20261117-002 — Tokens canônicos Bot_Pan (2026-11-17)
 - PEND-20261117-001 — F2.S1 compose+NPM (2026-11-17)

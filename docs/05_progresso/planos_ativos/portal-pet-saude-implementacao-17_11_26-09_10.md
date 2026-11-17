@@ -9,7 +9,7 @@ status: vigente
 
 > **Piloto:** portal-pet-saude | **Data:** 17/11/2026  
 > **Chamado ITIL (C):** 17423 (produção)  
-> **Projeto (R):** a obter via API (App-Token atual rejeitado; `.glpi/project.yaml` → `ticket_id: 17423`)
+> **Projeto (R):** 96 — GEP - Portal PET Saúde - 0. [PAI]
 
 Documentos âncora: `vis_001`, `req_001`…`req_008`, `rn_001`…`rn_004`, `glo_001`, `arq_001`, `adr_001`…`adr_005`, `dic_*`, `lgp_001`.
 
