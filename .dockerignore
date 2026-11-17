@@ -1,0 +1,16 @@
+_ref
+.git
+node_modules
+**/node_modules
+**/dist
+**/.env
+.env
+.env.*
+!.env.example
+!.env.g1.example
+docs
+coverage
+*.log
+.cursor
+.glpi/maps
+tools/glpi

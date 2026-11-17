@@ -44,8 +44,6 @@ services:
     depends_on:
       postgres:
         condition: service_healthy
-      g1-mock:
-        condition: service_started
     healthcheck:
       test: ["CMD", "node", "-e", "fetch('http://127.0.0.1:3000/api/health/live').then(r=>process.exit(r.ok?0:1)).catch(()=>process.exit(1))"]
       interval: 15s
@@ -76,7 +74,9 @@ services:
       - default
       - infra-ia
 
+  # Mock local. Perfil g1-mock (padrão via COMPOSE_PROFILES). Mutuamente exclusivo com g1-real.
   g1-mock:
+    profiles: ["g1-mock"]
     build:
       context: ./tools/g1-mock
     container_name: portal-pet-g1-mock
@@ -88,6 +88,28 @@ services:
       interval: 15s
       timeout: 5s
       retries: 5
+
+  # Nest Dashboard real (PEND-003). COMPOSE_PROFILES=g1-real. Ver tools/g1-nest/README.md
+  g1-dashboard:
+    profiles: ["g1-real"]
+    build:
+      context: ${G1_NEST_CONTEXT:-/home/petsaude/chatbot/chatbot-docs/Dashboard-PetSaude/back}
+      dockerfile: /home/petsaude/pet-saude-portal/portal-pet-saude/tools/g1-nest/Dockerfile
+    container_name: portal-pet-g1-dashboard
+    restart: unless-stopped
+    env_file:
+      - path: .env.g1
+        required: false
+    environment:
+      PORT: 3813
+    ports:
+      - "127.0.0.1:3813:3813"
+    healthcheck:
+      test: ["CMD", "node", "-e", "fetch('http://127.0.0.1:3813/').then(r=>process.exit(r.ok?0:1)).catch(()=>process.exit(1))"]
+      interval: 15s
+      timeout: 5s
+      retries: 10
+      start_period: 60s
 
 volumes:
   portal_pg_data:
