@@ -1,0 +1,22 @@
+/* Tokens shell — extraídos/adaptados do padrão Bot_Pan (ADR-001).
+   Fonte WSL local ausente nesta VM: ver PEND-20261117-002. */
+:root {
+  --bp-bg: #0f2a32;
+  --bp-bg-elevated: #163a44;
+  --bp-panel: #1b4752;
+  --bp-surface: #f3f6f4;
+  --bp-surface-2: #e7eeea;
+  --bp-ink: #102227;
+  --bp-ink-muted: #4d646b;
+  --bp-accent: #2f9e8a;
+  --bp-accent-strong: #1f7a6a;
+  --bp-warn: #c47a2c;
+  --bp-danger: #b33a3a;
+  --bp-border: rgba(16, 34, 39, 0.12);
+  --bp-sidebar-w: 248px;
+  --bp-right-w: 300px;
+  --bp-font: "Source Sans 3", "Segoe UI", sans-serif;
+  --bp-display: "Fraunces", Georgia, serif;
+  --bp-radius: 10px;
+  --bp-shadow: 0 10px 30px rgba(15, 42, 50, 0.18);
+}
