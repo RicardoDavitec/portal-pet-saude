@@ -1,8 +1,7 @@
 import { Inject, Injectable, OnModuleInit } from "@nestjs/common";
 import type { UsuarioStore, VinculoStore } from "@portal/ports";
-import { USUARIO_STORE, VINCULO_STORE } from "./infrastructure.module";
+import { USUARIO_STORE, VINCULO_STORE } from "./tokens";
 
-/** Seed mínimo para AUTH_MODE=dev (não roda em ldap). */
 @Injectable()
 export class DevSeedService implements OnModuleInit {
   constructor(

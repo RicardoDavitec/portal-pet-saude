@@ -8,13 +8,16 @@ import {
 } from "@portal/prisma-postgres";
 import { G1DashboardHttpAdapter } from "@portal/g1-dashboard-http";
 import { DevSeedService } from "./dev-seed.service";
+import {
+  CHATBOT_ANALYTICS,
+  FAQ_CATALOG,
+  SESSION_STORE,
+  USER_DIRECTORY,
+  USUARIO_STORE,
+  VINCULO_STORE,
+} from "./tokens";
 
-export const USER_DIRECTORY = "USER_DIRECTORY";
-export const USUARIO_STORE = "USUARIO_STORE";
-export const SESSION_STORE = "SESSION_STORE";
-export const VINCULO_STORE = "VINCULO_STORE";
-export const FAQ_CATALOG = "FAQ_CATALOG";
-export const CHATBOT_ANALYTICS = "CHATBOT_ANALYTICS";
+export * from "./tokens";
 
 @Global()
 @Module({
