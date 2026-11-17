@@ -5,11 +5,12 @@
   - fim: 2026-11-17 16:00
   - inicio_real: 2026-11-17 11:43
   - fim_real: 2026-11-17 11:50
-- [ ] **F2.S1.P2** Prisma schema inicial + migration vazia de usuários/vínculos
+- [x] **F2.S1.P2** Prisma schema inicial + migration vazia de usuários/vínculos
   - inicio: 2026-11-17 16:00
   - fim: 2026-11-18 12:00
-  - inicio_real:
-  - fim_real:
+  - inicio_real: 2026-11-17 11:50
+  - fim_real: 2026-11-17 11:51
+  - nota: migration init aplicada; entrypoint da API roda `prisma migrate deploy`
 - [ ] **F2.S1.P3** NPM: apontar petsaude.franca para :3862 (remover redirect chatbots)
   - inicio: 2026-11-18 14:00
   - fim: 2026-11-18 16:00

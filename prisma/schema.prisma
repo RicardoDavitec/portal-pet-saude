@@ -1,5 +1,5 @@
-// Schema inicial — Portal PET Saúde (ADR-004).
-// Migrations serão aplicadas em F2.S1.
+// Schema inicial — Portal PET Saúde (ADR-004 / F2.S1.P2).
+// Migration: prisma/migrations/20261117110000_init
 
 generator client {
   provider = "prisma-client-js"
