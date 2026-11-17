@@ -29,20 +29,20 @@
   Módulo: `web`
   Inserido em: `2026-11-17 10:50`
   Corrigido em: `—`
-  Contexto: Pasta `…/projetos/Bot_Pan` não encontrada nesta VM; shell usa tokens adaptados em `apps/web/src/styles/tokens.css` (ADR-001).
+  Contexto: Pasta `…/projetos/Bot_Pan` / VitaGuard não encontrada em `/home`, `/srv` nem mounts WSL; shell atual usa tokens municipais adaptados em `apps/web/src/styles/tokens.css` (ADR-001). Há tokens do Dashboard-PetSaude (`front/src/styles.css`, sidebar roxo `#4b4fa8` / `#1f2140`) — **não** substituem Bot_Pan e não devem ser copiados à cegas.
   Critério: Diff visual documentado contra Bot_Pan WSL e tokens atualizados.
-  Evidência: N/A (path WSL ausente)
-  Refs: `apps/web/src/styles/tokens.css`, ADR-001
+  Evidência: varredura 2026-11-17 — path WSL ausente
+  Refs: `apps/web/src/styles/tokens.css`, ADR-001; `/home/petsaude/chatbot/chatbot-docs/Dashboard-PetSaude/front/src/styles.css`
   <!-- glpi: plan_start="2026-11-17 10:50" plan_end="2026-12-05 18:00" -->
 
 - [ ] **PEND-20261117-003** Substituir g1-mock pelo Nest Dashboard real :3813
   Módulo: `infra`
   Inserido em: `2026-11-17 10:50`
   Corrigido em: `—`
-  Contexto: Compose sobe `tools/g1-mock` em 3813 para health/adapter; Nest real (`Dashboard-PetSaude/back`) exige Mongo/Postgres próprios e não estava em execução.
-  Critério: Serviço Nest G1 healthy em `127.0.0.1:3813` e `G1_DASHBOARD_API_URL` apontando para ele sem mock.
-  Evidência: `tools/g1-mock/`; `/home/petsaude/chatbot/chatbot-docs/Dashboard-PetSaude/back`
-  Refs: ADR-003, F2.S4.P1
+  Contexto: Compose sobe `tools/g1-mock` em 3813; Nest real (`Dashboard-PetSaude/back`) usa `PORT` default **3333** (sem referência a 3813 no repo), JWT + roles `admin|editor|leitor`, Mongo (FAQs) + Postgres (users/sessions). Rotas alvo do adapter: `/faqs`, `/conversas` (PII admin-only no Nest).
+  Critério: Nest G1 healthy em `127.0.0.1:3813` (bind/map `3813→3333` ou `PORT=3813`) e `G1_DASHBOARD_API_URL` sem mock; service token/JWT alinhados.
+  Evidência: `tools/g1-mock/`; `/home/petsaude/chatbot/chatbot-docs/Dashboard-PetSaude/back/src/main.ts`
+  Refs: ADR-003, F2.S4.P1; faqs.controller / conversas.controller
   <!-- glpi: plan_start="2026-11-17 10:50" plan_end="2026-12-12 18:00" -->
 
 - [ ] **PEND-20261117-004** Parâmetros LDAP reais do DTI
