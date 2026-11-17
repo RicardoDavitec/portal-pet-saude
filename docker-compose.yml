@@ -36,7 +36,7 @@ services:
       LDAP_BIND_DN: ${LDAP_BIND_DN:-}
       LDAP_BIND_PASSWORD: ${LDAP_BIND_PASSWORD:-}
       LDAP_USER_FILTER: ${LDAP_USER_FILTER:-(sAMAccountName={{username}})}
-      G1_DASHBOARD_API_URL: ${G1_DASHBOARD_API_URL:-http://g1-mock:3813}
+      G1_DASHBOARD_API_URL: ${G1_DASHBOARD_API_URL_DOCKER:-http://g1-mock:3813}
       G1_SERVICE_TOKEN: ${G1_SERVICE_TOKEN:-}
       CORS_ORIGINS: ${CORS_ORIGINS:-http://127.0.0.1:3862,http://localhost:3862,https://petsaude.franca.sp.gov.br}
     ports:
