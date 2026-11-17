@@ -15,8 +15,8 @@
   - fim: 2026-11-27 17:00
   - inicio_real: 2026-11-17 11:06
   - fim_real: 2026-11-17 11:07
-- [ ] **F2.S2.P4** Guards de autorização na API
+- [x] **F2.S2.P4** Guards de autorização na API
   - inicio: 2026-11-28 09:00
   - fim: 2026-11-28 17:00
-  - inicio_real:
-  - fim_real:
+  - inicio_real: 2026-11-17 11:07
+  - fim_real: 2026-11-17 11:02
