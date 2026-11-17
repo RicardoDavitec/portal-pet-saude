@@ -11,11 +11,11 @@
   - fim: 2026-12-10 17:00
   - inicio_real: 2026-11-17 11:21
   - fim_real: 2026-11-17 11:22
-- [ ] **F2.S4.P3** UI workspace G1 (lista/edição FAQ) no shell
+- [x] **F2.S4.P3** UI workspace G1 (lista/edição FAQ) no shell
   - inicio: 2026-12-11 09:00
   - fim: 2026-12-11 17:00
-  - inicio_real:
-  - fim_real:
+  - inicio_real: 2026-11-17 11:22
+  - fim_real: 2026-11-17 11:14
 - [ ] **F2.S4.P4** Conversas/PII só gestor/coord/tutor; espelho Vercel intacto
   - inicio: 2026-12-12 09:00
   - fim: 2026-12-12 17:00
