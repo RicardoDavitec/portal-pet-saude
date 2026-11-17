@@ -1,5 +1,6 @@
 .env
 .env.local
+.env.g1
 _ref/
 node_modules/
 dist/
