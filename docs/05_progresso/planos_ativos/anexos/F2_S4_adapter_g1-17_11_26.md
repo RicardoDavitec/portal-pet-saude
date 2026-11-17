@@ -15,9 +15,9 @@
   - inicio: 2026-12-11 09:00
   - fim: 2026-12-11 17:00
   - inicio_real: 2026-11-17 11:22
-  - fim_real: 2026-11-17 11:14
-- [ ] **F2.S4.P4** Conversas/PII só gestor/coord/tutor; espelho Vercel intacto
+  - fim_real: 2026-11-17 11:23
+- [x] **F2.S4.P4** Conversas/PII só gestor/coord/tutor; espelho Vercel intacto
   - inicio: 2026-12-12 09:00
   - fim: 2026-12-12 17:00
-  - inicio_real:
-  - fim_real:
+  - inicio_real: 2026-11-17 11:23
+  - fim_real: 2026-11-17 11:14
